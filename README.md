@@ -5,15 +5,9 @@ cd freedom-e-sdk
 
 make tools
 
-make software
+git clone git@github.com:prusnak/sifive-bench.git software/bench
 
-cd software
+make software PROGRAM=bench
 
-git clone git@github.com:satoshilabs/signtest.git
-
-cd ..
-
-make software PROGRAM=signtest
-
-make upload PROGRAM=signtest
+make upload PROGRAM=bench
 ```
